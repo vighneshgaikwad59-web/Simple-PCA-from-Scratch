@@ -41,20 +41,7 @@ print("Variance explained:", variance_ratio)
 Running the script directly gives a toy example: 3 "healthy" + 3
 "disease" samples across 4 genes, reduced to 2D.
 
-```bash
-python simple_pca_short.py
-```
 
-```
-Reduced data (2D):
- [[ 2.58 -0.86]
-  [ 2.99 -0.27]
-  [ 4.05  0.99]
-  [-2.4  -1.31]
-  [-2.71  1.33]
-  [-4.52  0.11]]
-Variance explained by PC1, PC2: [0.878 0.071]
-```
 
 PC1 alone captures ~88% of the variance — clearly separating healthy vs
 disease samples.
