@@ -36,15 +36,6 @@ print(reduced)
 print("Variance explained:", variance_ratio)
 ```
 
-## Demo
-
-Running the script directly gives a toy example: 3 "healthy" + 3
-"disease" samples across 4 genes, reduced to 2D.
-
-
-
-PC1 alone captures ~88% of the variance — clearly separating healthy vs
-disease samples.
 
 ## Requirements
 
