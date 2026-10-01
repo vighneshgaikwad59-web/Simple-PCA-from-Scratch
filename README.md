@@ -1,27 +1,34 @@
 # Simple PCA from Scratch
 
 A minimal implementation of Principal Component Analysis (PCA) using
-only **NumPy** — no `sklearn`, no black-box magic.
+only **NumPy**, with no `sklearn` and no black-box magic.
 
 ## Why PCA?
 
-Socho tumhare paas ek gene expression dataset hai — har row ek sample
-(patient), har column ek gene ka expression level. Agar 500 genes hain,
-toh data ko visualize karna impossible hai.
+Imagine a gene expression dataset: each row is a sample (patient) and each
+column is the expression level of one gene. With 500 genes, you can't
+visualize the data directly.
 
-PCA data mein sabse zyada **variation** (spread) kis direction mein hai
-woh dhundta hai — jaise photographer best angle dhundta hai jahan se
-subject sabse clearly dikhe. Un top directions (**Principal Components**)
-pe data ko project karke hum high-dimensional data ko 2D/3D mein la
-sakte hain, bina zyada information khoye.
+PCA finds the directions along which the data varies the most, like a
+photographer looking for the angle that shows the subject most clearly.
+By projecting the data onto those top directions (the **Principal
+Components**), you can bring high-dimensional data down to 2D or 3D
+without losing much information.
 
 ## How it works
 
-1. **Center the data** — har feature ko apne mean ke around laao
-2. **Covariance matrix** — dekho features aapas mein kaise vary karte hain
-3. **Eigen decomposition** — covariance matrix ki main directions nikalo
-4. **Sort by eigenvalue** — sabse zyada variance wali direction pehle
-5. **Project** — original data ko un top directions pe daalo
+1. **Center the data**: shift each feature so its mean is zero
+2. **Covariance matrix**: measure how features vary together
+3. **Eigen decomposition**: extract the main directions of the covariance matrix
+4. **Sort by eigenvalue**: the direction with the most variance comes first
+5. **Project**: map the original data onto the top directions
+
+
+Cloning an existing copy of this repo? Just run:
+
+```bash
+uv sync
+```
 
 ## Usage
 
@@ -36,11 +43,17 @@ print(reduced)
 print("Variance explained:", variance_ratio)
 ```
 
+Run it with:
+
+```bash
+uv run python your_script.py
+```
 
 ## Requirements
 
 - Python 3.x
 - NumPy
+- [uv](https://docs.astral.sh/uv/) (optional, but recommended)
 
 ## Author
 
