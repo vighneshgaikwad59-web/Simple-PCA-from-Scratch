@@ -55,6 +55,4 @@ uv run python your_script.py
 - NumPy
 - [uv](https://docs.astral.sh/uv/) (optional, but recommended)
 
-## Author
 
-Vighnesh Anand Gaikwad
